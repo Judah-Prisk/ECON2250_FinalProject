@@ -1,0 +1,34 @@
+---
+title: "Economics Final Project — Research Topic"
+author: "Raphael, Judah, Eli, Neil"
+format:
+  pdf:
+    documentclass: scrartcl
+    papersize: letter
+    fontsize: 11pt
+    geometry: margin=1in
+---
+
+# Topic 1: Payroll Spending and Team Performance in Major League Baseball vs. Salary Capped Leagues
+
+**1. Brief Description:**  
+This topic explores how payroll spending influences team success in Major League Baseball (MLB) and compares it to leagues that enforce salary caps, such as the NFL or NBA. The goal is to analyze whether higher payrolls consistently lead to better win-loss records and how salary caps affect competitive balance.
+
+**2. Motivation:**  
+We're interested in combining economics and sports analytics to understand how financial regulation shapes competition. MLB’s lack of a salary cap offers a natural contrast with leagues that restrict payrolls, allowing an economic analysis of market freedom versus regulation.
+
+**3. Potential Audience:**  
+Sports economists, league policymakers, team managers, and fans interested in the economics of sports and competitive fairness.
+
+**4. Potential Research Questions:**  
+- To what extent does payroll spending influence team performance in Major League Baseball compared to salary-capped leagues such as the NFL?  
+- How does the relationship between payroll and performance differ in leagues with salary caps?  
+- Does the presence of a salary cap improve overall competitive balance among teams?
+
+Chosen research question: To what extent does payroll spending influence team performance in Major League Baseball compared to salary-capped leagues such as the NFL?  
+
+**5. Potential Data Sources:**  
+- MLB payroll and performance data from Spotrac, Baseball-Reference, or Fangraphs  
+- NFL/NBA payroll and win-loss records from StatMuse or ESPN  
+- Team revenue and market size data from Forbes sports valuations or Statista  
+- Possible regression analysis using payroll as an independent variable and win percentage as the dependent variable
