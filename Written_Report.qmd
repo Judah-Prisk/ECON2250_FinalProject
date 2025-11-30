@@ -1,0 +1,102 @@
+---
+title: "Payroll Spending and Team Performance in MLB vs. NFL"
+author: "Raphael, Judah, Eli, Neil"
+date: "2025-11-30"
+format:
+  pdf: default
+  html: default
+execute:
+  echo: true
+---
+
+**Introduction and Data**
+
+The purpose of this project is to examine how payroll spending influences team performance in Major League Baseball (MLB) compared to the National Football League (NFL). These two leagues differ in an important structural way: MLB does not have a salary cap, allowing teams considerable freedom in how much they spend on players, while the NFL imposes a strict hard salary cap designed to maintain competitive balance. Because of this difference, we expect payroll to play a larger role in determining outcomes in MLB than in the NFL.
+
+To investigate this question, we use a dataset that contains team payrolls (both raw and inflation-adjusted) and win percentage for all MLB and NFL teams across multiple seasons. The key variables used in the analysis include:
+
+**Total_Payroll**: Total team payroll, measured in dollars.
+
+**Payroll_Adj**: Inflation-adjusted payroll.
+
+**Win_Pct**: Team winning percentage for the season (0–1).
+
+**Team / Year**: Identifier variables.
+
+Prior to analysis, the data was cleaned by removing currency symbols, converting payroll values to numeric formats, filtering out missing values, and separating the MLB and NFL observations for league-specific analysis.
+
+We begin with descriptive statistics. MLB payrolls range from about $42M to $350M, while NFL payrolls fall within a smaller and more compressed range due to the salary cap. Average win percentages cluster around 0.500 in both leagues, consistent with expected parity. However, MLB teams show greater variability in win percentage, which may reflect differences in spending power across teams. These patterns establish the groundwork for examining whether payroll predicts winning.
+
+**Methodology**
+
+To evaluate whether payroll spending affects team performance, we perform hypothesis testing using simple linear regression separately for each league.
+
+**Hypotheses**
+
+Because we expect payroll to matter more in MLB than in the NFL, we test:
+
+**MLB**
+
+**Null Hypothesis (H₀)**: Payroll spending has no relationship with win percentage (β₁ = 0).
+
+**Alternative Hypothesis (H₁)**: Payroll spending is positively related to win percentage (β₁ > 0).
+
+**NFL**
+
+Null Hypothesis (H₀): Payroll spending has no relationship with win percentage (β₁ = 0).
+
+Alternative Hypothesis (H₁): Payroll spending is related to win percentage (β₁ ≠ 0).
+(Two-sided because we do not expect a direction, only that the salary cap may limit any effect.)
+
+**Statistical Test**
+
+We use a simple linear regression model:
+
+Win_Pcti​=β0​+β1​Total_Payrolli​+ϵi​
+
+The key assumption is that the error term is independent and normally distributed with constant variance. Although other factors (coaching, roster quality, injuries) also influence performance, this model isolates payroll as the explanatory variable relevant to our research question.
+
+**Results**
+**MLB Results**
+
+The MLB regression shows a statistically significant, positive relationship between payroll and winning percentage (p < 0.001). The estimated coefficient on payroll indicates that teams with larger payrolls tend to win more games. The model’s R² value of about 0.17 suggests payroll explains roughly 17% of the variation in winning percentage—substantial for a single variable in sports performance data.
+
+**NFL Results**
+
+In the NFL, payroll has no statistically significant effect on win percentage (p = 0.624). The coefficient is near zero, and the R² value is almost exactly 0, confirming that payroll does not help explain the variation in team performance. The flat regression line in the visualization further supports this finding: increased spending offers no measurable advantage under the NFL’s hard salary cap.
+
+**Interpretation**
+
+Taken together, these results aligned with our expectations. MLB teams gain measurable benefits from higher spending, while NFL teams do not, suggesting that institutional financial rules shape how money translates into on-field success.
+
+**Discussion and Conclusion**
+
+This analysis shows a clear contrast between MLB and the NFL. In MLB, where financial restrictions are minimal, payroll meaningfully contributes to team success: teams can spend to acquire top-tier talent, and this spending correlates with higher winning percentages. In the NFL, the salary cap imposes an equal spending limit on all teams, reducing the strategic value of payroll as a tool for improving performance.
+
+**Limitations**
+
+Several limitations should be acknowledged:
+
+Simple regression: Payroll alone cannot capture all drivers of team success; factors like coaching quality, player development, roster construction, and injuries are not included.
+
+Measurement error: Payroll does not necessarily reflect on-field value (e.g., injured players still count toward payroll).
+
+Cross-season comparisons: Teams rebuild or tank strategically in some years, which may distort payroll–performance relationships.
+
+Linearity assumption: The true relationship might be nonlinear (e.g., diminishing returns to spending).
+
+**Future Improvements**
+
+Future work could examine:
+
+Multivariate regressions including player-level WAR, coaching metrics, or injury data.
+
+Within-team fixed effects to control for organization-specific factors.
+
+Comparing MLB to other uncapped leagues (e.g., Premier League soccer).
+
+Modeling diminishing returns to payroll and threshold effects.
+
+**Conclusion**
+
+Ultimately, the evidence suggests that payroll is a meaningful competitive tool in MLB but not in the NFL. League structure plays a crucial role in shaping how financial resources translate into on-field outcomes: free-spending environments reward deeper pockets, while tightly regulated systems promote parity and true competition.
